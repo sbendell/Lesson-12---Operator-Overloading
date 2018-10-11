@@ -36,6 +36,9 @@
     <ClInclude Include="ArmedEnemy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ComplexNumber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -51,6 +54,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ArmedEnemy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ComplexNumber.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
