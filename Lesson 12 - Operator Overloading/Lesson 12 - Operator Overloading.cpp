@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include "Matrix.h"
+#include "ArmedEnemy.h"
 
 using namespace std;
 
@@ -27,6 +28,16 @@ int main()
 
 	Matrix<int> product = (mtx1 * mtx3);
 	cout << "matrix product assigned from mtx1 * mtx3:\n" << product;
+
+	Matrix<int> sum = (mtx1 + mtx3);
+	cout << "matrix sum assigned from mtx1 + mtx3:\n" << sum;
+
+	Matrix<int> subtract = (mtx1 - mtx3);
+	cout << "matrix subtraction assigned from mtx1 + mt3:\n" << subtract;
+
+	ArmedEnemy ae(100, 30);
+
+	cout << ae;
 
 	int x;
 	cin >> x;

@@ -18,6 +18,10 @@ public:
 	friend ostream& operator<<(ostream& ostr, const Matrix<E>& mtx);
 	template <typename E>
 	friend Matrix<E> operator*(const Matrix<E>& a, const Matrix<E>& b);
+	template <typename E>
+	friend Matrix<E> operator+(const Matrix<E>& a, const Matrix<E>& b);
+	template <typename E>
+	friend Matrix<E> operator-(const Matrix<E>& a, const Matrix<E>& b);
 
 	int get_x_size() const { return x_size; }
 	int get_y_size() const { return y_size; }
@@ -112,6 +116,28 @@ Matrix<E> operator*(const Matrix<E>& a, const Matrix<E>& b) {
 			for (int k = 0; k < a.x_size; ++k) {
 				result.cells[i][j] += (a.cells[k][j] * b.cells[i][k]);
 			}
+		}
+	}
+	return result;
+}
+
+template <typename E>
+Matrix<E> operator+(const Matrix<E>& a, const Matrix<E>& b) {
+	Matrix<E> result(a.x_size, b.y_size);
+	for (int i = 0; i < a.x_size; ++i) {
+		for (int j = 0; j < a.x_size; ++j) {
+			result.cells[i][j] = (a.cells[i][j] + b.cells[i][j]);
+		}
+	}
+	return result;
+}
+
+template <typename E>
+Matrix<E> operator-(const Matrix<E>& a, const Matrix<E>& b) {
+	Matrix<E> result(a.x_size, b.y_size);
+	for (int i = 0; i < a.x_size; ++i) {
+		for (int j = 0; j < a.x_size; ++j) {
+			result.cells[i][j] = (a.cells[i][j] - b.cells[i][j]);
 		}
 	}
 	return result;
