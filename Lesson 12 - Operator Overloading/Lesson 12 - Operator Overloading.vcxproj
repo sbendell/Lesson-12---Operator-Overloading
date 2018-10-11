@@ -140,6 +140,7 @@
   <ItemGroup>
     <ClInclude Include="ArmedEnemy.h" />
     <ClInclude Include="Comparable.h" />
+    <ClInclude Include="ComplexNumber.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="stdafx.h" />
@@ -148,6 +149,7 @@
   <ItemGroup>
     <ClCompile Include="ArmedEnemy.cpp" />
     <ClCompile Include="Comparable.cpp" />
+    <ClCompile Include="ComplexNumber.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Lesson 12 - Operator Overloading.cpp" />
     <ClCompile Include="stdafx.cpp">
