@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "Matrix.h"
 #include "ArmedEnemy.h"
+#include "ComplexNumber.h"
 
 using namespace std;
 
@@ -35,9 +36,11 @@ int main()
 	Matrix<int> subtract = (mtx1 - mtx3);
 	cout << "matrix subtraction assigned from mtx1 + mt3:\n" << subtract;
 
-	ArmedEnemy ae(100, 30);
+	ComplexNumber cn1(1, 3);
+	ComplexNumber cn2(5, 2);
 
-	cout << ae;
+	ComplexNumber cnMult = cn1 * cn2;
+	cout << "Real: " << cnMult.get_real() << "Imaginary: " << cnMult.get_imaginary();
 
 	int x;
 	cin >> x;
